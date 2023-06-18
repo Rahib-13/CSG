@@ -131,15 +131,18 @@ header {
     height: 500px;
   }
 }
+h2 {
+  width: 100%;
+  padding: 0px 104px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 #secondPage {
-  h2 {
-    width: 100%;
-  }
-  gap: 3%;
+  justify-content: space-between;
   margin-bottom: 50px;
   padding: 0px 104px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   .facebook {
     margin-top: 25px;
     width: 30%;

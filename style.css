@@ -130,15 +130,19 @@ header .signinUP button:nth-child(2) a {
   background: color #da1e2c;
 }
 
+h2 {
+  width: 100%;
+  padding: 0px 104px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 #secondPage {
-  gap: 3%;
+  justify-content: space-between;
   margin-bottom: 50px;
   padding: 0px 104px;
   display: flex;
-  flex-wrap: wrap;
-}
-#secondPage h2 {
-  width: 100%;
+  flex-wrap: nowrap;
 }
 #secondPage .facebook {
   margin-top: 25px;
