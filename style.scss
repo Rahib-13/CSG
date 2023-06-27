@@ -1,11 +1,14 @@
 @import url(//db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display);
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  color: white;
+}
+a{
+  color: white !important;
 }
 *::selection {
   background-color: #e81c25;
@@ -27,6 +30,7 @@
 }
 body {
   width: 100vw;
+  background: -webkit-linear-gradient(red, blue);
 }
 
 header {
@@ -35,6 +39,14 @@ header {
   align-items: center;
   height: 12vh;
   justify-content: space-between;
+  main:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    i:nth-child(1) {
+      display: none;
+    }
+  }
   img {
     width: 50px;
     height: 50px;
@@ -43,6 +55,9 @@ header {
     font-weight: 600;
     font-size: 22px;
     color: #e91b25;
+    &::selection{
+      background-color: #462c83;
+    }
     // color: -webkit-linear-gradient(#E91B25, #3B318A);
     // !alınmadı
   }
@@ -56,12 +71,12 @@ header {
       width: 30%;
       height: 45px;
       border-radius: 64px;
-      border: none;
+      // border: none;
       transition: 0.5s all;
       &:hover {
         transform: scale(1.08);
         border: 1px solid #e81c25;
-        background-color: #e81c25;
+        background-color: #7734a7; 
         a {
           color: white;
         }
@@ -84,6 +99,7 @@ header {
         transform: scale(1.05);
         background-color: transparent;
         border: 1px solid #e81c25;
+        background-color: #7734a7;
         a {
           color: #e81c25;
         }
@@ -101,12 +117,12 @@ header {
   display: flex;
   margin-top: 20px;
   gap: 30px;
-//   height: 550px;
+  //   height: 550px;
   .leftP {
     width: 30%;
     img {
-      width: 70%;
-      height: 50%;
+      width: 300px;
+      height: 300px;
     }
   }
   .rightP {
@@ -131,8 +147,12 @@ header {
     gap: 30px;
     width: 50%;
     height: 500px;
-    p{
-        width: 100%;
+    p {
+      width: 100%;
+      &::selection{
+        background-color: white;
+        color: #e81c25;
+      }
     }
   }
 }
@@ -168,7 +188,7 @@ h2 {
       font-weight: 700;
     }
     .description {
-      color: #757575;
+      color: #ffffff;
       font-size: 18px;
     }
     button {
@@ -213,7 +233,7 @@ h2 {
       }
     }
     .description {
-      color: #757575;
+      color: #ffffff;
       font-size: 18px;
     }
     button {
@@ -254,7 +274,7 @@ h2 {
       font-weight: 700;
     }
     .description {
-      color: #757575;
+      color: #ffffff;
       font-size: 18px;
     }
     button {
@@ -291,7 +311,7 @@ footer {
   padding: 30px 5%;
   border-bottom: 1px solid #757575;
   p {
-    color: #a1a1a1;
+    color: #fffdfd;
   }
   aside {
     font-size: 40px;
@@ -310,97 +330,105 @@ footer {
 }
 
 .lastword {
-  color: #757575;
+  color: #fffbfb;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 100%;
   text-align: center;
 }
 
-
 @media screen and (max-width: 600px) {
-    header{
-        padding: 0px 5%;
-        img{
-            width: 20%;
-            height: 70%;
-        }
-        .headtext{
-            font-size: 14px;
-            width: 30%;
-            text-align: center;
-            
-        }
-        .signinUP{
-            width: 50%;
-            button:nth-child(1){
-                width: 80%;
-            }
-            button:nth-child(2){
-                padding: 5px;
-                width: 70%;
-                border-radius: 8px;
-                a{
-                    font-size: 12px;
-                }
-            }
-        }
+  header {
+    padding: 0px 5%;
+    gap: 30px;
+    main:nth-child(1) {
+      gap: 20px;
+      i:nth-child(1) {
+        display: block;
+      }
+      i:nth-child(2) {
+        display: none;
+      }
     }
-    #firstPage{
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    .headtext {
+      display: inline-block;
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+    }
+    .signinUP {
+      width: 50%;
+      button:nth-child(1) {
+        width: 80%;
+      }
+      button:nth-child(2) {
+        padding: 5px;
+        width: 70%;
+        border-radius: 8px;
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  #firstPage {
+    width: 100%;
+    height: 30vh;
+    .leftP {
+      width: 40%;
+      height: auto;
+      img {
         width: 100%;
-        height: 30vh;
-        .leftP{
-            width: 40%;
-            height: auto;
-            img{
-                width: 100%;
-                height:60%;
-            }
-        }
-        .rightP{
-            height: auto;
-            h1{
-                font-size: 16px;
-            }
-            p{
-                font-size: 11px;
-            }
-        }
+        height: 60%;
+      }
     }
-    h2{
-        font-size: 26px;
-        margin-top: 80px;
-        text-align: center;
+    .rightP {
+      height: auto;
+      h1 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 11px;
+      }
     }
-    #secondPage{
-        height: auto;
-        padding: 0px 5%;
-        display: flex;
-        flex-direction: column;
-        // gap: 5px;
-        .facebook{
-            gap: 20px;
-            width: 100%;
-            height: 40vh;
-        }
-        .instagram{
-            width: 100%;
-            height: 40vh;
-            gap: 20px;
-        }
-        .youtube{
-            width: 100%;
-            height: 40vh;
-            gap: 20px;
-        }
+  }
+  h2 {
+    font-size: 26px;
+    margin-top: 0px;
+    text-align: center;
+  }
+  #secondPage {
+    height: auto;
+    padding: 0px 5%;
+    display: flex;
+    flex-direction: column;
+    // gap: 5px;
+    .facebook {
+      gap: 20px;
+      width: 100%;
+      height: 40vh;
     }
-    footer{
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        aside{
-            font-size: 25px;
-        }
+    .instagram {
+      width: 100%;
+      height: 40vh;
+      gap: 20px;
     }
+    .youtube {
+      width: 100%;
+      height: 40vh;
+      gap: 20px;
+    }
+  }
+  footer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    aside {
+      font-size: 25px;
+    }
+  }
 }
-
