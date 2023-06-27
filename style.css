@@ -21,6 +21,12 @@
   src: url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.woff") format("woff"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e97.svg#SF Pro Display") format("svg");
 }
 
+.container {
+  position: relative;
+  max-width: 1900px;
+  margin: 0px auto;
+}
+
 #menyu {
   width: 550px;
   height: 700px;
@@ -30,6 +36,7 @@
   transition: 0.5s all;
   top: 12vh;
   left: 5px;
+  visibility: hidden;
   background: -webkit-linear-gradient(red, blue);
   margin-left: -555px;
   color: white;
@@ -335,6 +342,7 @@ footer #icons img:hover {
 
 .open {
   margin-left: 0 !important;
+  visibility: visible !important;
 }
 
 @media screen and (max-width: 600px) {
@@ -349,6 +357,10 @@ footer #icons img:hover {
     background-color: red;
     margin-left: -255px;
     border-radius: 8px;
+  }
+  #menyu p {
+    font-size: 20px;
+    margin-top: 20px;
   }
   header {
     padding: 0px 5%;
